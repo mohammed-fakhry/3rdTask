@@ -11,13 +11,14 @@ nav {
     width: 300px;
 }
 
-#welcomeImg {
-    position: relative;
+#firstSection {
+    margin-top: 70px;
     height: 570px;
 }
 
-#firstSection {
-    margin-top: 70px;
+#welcomeImg {
+    position: relative;
+    height: 350px;
 }
 
 #welcomeImg .slides {
