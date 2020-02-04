@@ -2,13 +2,20 @@
 nav {
     position: relative;
 }
-/*
-#userSign {
-    position: absolute;
-    right:20px;
-}*/
 
 #navSearch input{
     display: none;
-    width: 300px
+    width: 300px;
+}
+
+#welcomeImg {
+    position: relative;
+}
+
+#welcomeImg > .slides {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    top:0;
 }
