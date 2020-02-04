@@ -1,7 +1,8 @@
 body {
-    font-family: 'segoe ui light';
+    font-family: 'segoe ui light'; /*fakhry*/
 }
 
+/*fakhry*/
 nav {
     position: relative;
 }
@@ -13,7 +14,8 @@ nav {
 
 #firstSection {
     margin-top: 70px;
-    height: 570px;
+    height: 720px;
+    background-color: rgba(245, 245, 245, 0.164);
 }
 
 #welcomeImg {
@@ -23,17 +25,21 @@ nav {
 
 #welcomeImg .slides {
     position: absolute;
-    top: 0;
+    top: -20;
     bottom: 0;
     left:0;
-    top:0;
 }
 
 #headerDescr {
-    /*background-color: rgba(0, 0, 0, 0.8);*/
     padding: 20px;
 }
 
-.backEffect {
+.backColor {
     background-color: rgba(128, 128, 128, 0.219);
 }
+
+#firstSection .col-md-12{
+    height: 500px;
+}
+
+/*fakhry*/

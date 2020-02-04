@@ -1,9 +1,10 @@
 
 //--------------------------------------------------Fakhry
+
 //scroll
 $(window).scroll(function () {
-    var scrolling = $(this).scrollTop();
 
+    var scrolling = $(this).scrollTop();
     if (scrolling >= 50) {
         $('nav').removeClass('navbar-light bg-light')
         $('nav').addClass('navbar-dark bg-dark')
@@ -15,14 +16,14 @@ $(window).scroll(function () {
 })
 
 // search icon effect
-$("#navSearch i").click(function () {
+$("#navSearch i").click(function () { //Open
     $("#navSearch input").show(200, function () {
         $("#navSearch i:first").hide();
         $("#navSearch i").next().show();
     });
 });
 
-$("#navSearch i").next().click(function () {
+$("#navSearch i").next().click(function () { //Close
     $("#navSearch input").hide(200, function () {
         $("#navSearch i").show();
         $("#navSearch i:first").next().hide();
@@ -43,13 +44,14 @@ function welcomeLoad() {
 }
 window.onload = function () {
     welcomeLoad();
+    $('#welcomeImg img').animate({ top: '20' }, 2100);
 };
 // image effects
 $("#welcomeImg").mouseenter(function () {
     $('#welcomeImg img').animate({ top: '-20' })
 })
 $("#welcomeImg").mouseleave(function () {
-    $('#welcomeImg img').animate({ top: '0' })
+    $('#welcomeImg img').animate({ top: '20' })
 })
 
 //SlideShow
@@ -69,7 +71,7 @@ setInterval(function () {
         $('#welcomeTxt h2').html("Revols")
         $('#welcomeTxt p').html("Revols takes a bold approach on its website by enlarging its small, sophisticated headphones using macro photography and video. The photography and video make the site incredibly product-focused, so its users slowly become more and more immersed in the experience these headphones can give you.")
     } else if (headImgSrc == "Source/header2.jpg") {
-        $("#headerDescr").addClass("backEffect")
+        $("#headerDescr").addClass("backColor")
         $("#headerDescr").removeClass("bg-dark text-light")
         $('#welcomeTxt h2').html("uBear")
         $('#welcomeTxt p').html("uBear designs, develops and produces mobile accessories and related products for urban-minded peoples driven by energy of big cities.")
@@ -82,8 +84,6 @@ setInterval(function () {
         .end()
         .appendTo('#welcomeImg');
 }, 5000);
-
-
 
 //--------------------------------------------------Fakhry
 
