@@ -1,3 +1,6 @@
+body {
+    font-family: 'segoe ui light';
+}
 
 nav {
     position: relative;
@@ -18,4 +21,5 @@ nav {
     bottom: 0;
     left:0;
     top:0;
+    
 }

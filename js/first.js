@@ -14,7 +14,7 @@ $("#navSearch i").next().click(function () {
     })
 });
 
-// welcome Texy
+// welcome Text
 var t = 0;
 var Headertxt = 'Add Your brilliant web site Here.';
 function welcomeLoad() {
@@ -22,15 +22,18 @@ function welcomeLoad() {
         document.getElementById("headerTxt").innerHTML += Headertxt.charAt(t);
         t++;
         setTimeout(welcomeLoad, 50);
-        $('#welcomeTxt button').delay(1800).fadeIn(900)
+        $('#welcomeTxt button').delay(2000).fadeIn().animate({marginTop: '25px', padding: '10px', fontSize: '1.5em'},500)
     }
 }
 window.onload = function () {
     welcomeLoad();
 };
 // image effects
-$("#welcomeImg img").hover(function () {
-    $(this).toggleClass("shadow")
+$("#welcomeImg").mouseenter(function () {
+    $('#welcomeImg img').animate({top: '-20'})
+})
+$("#welcomeImg").mouseleave(function () {
+    $('#welcomeImg img').animate({top: '0'})
 })
 // Image SlideShow
 $("#welcomeImg > .slides:gt(0)").hide();
