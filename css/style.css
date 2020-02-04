@@ -1,0 +1,14 @@
+
+nav {
+    position: relative;
+}
+/*
+#userSign {
+    position: absolute;
+    right:20px;
+}*/
+
+#navSearch input{
+    display: none;
+    width: 300px
+}
