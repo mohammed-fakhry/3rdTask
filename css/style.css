@@ -29,3 +29,11 @@ nav {
     top:0;
 }
 
+#headerDescr {
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    padding: 20px;
+}
+
+.backEffect {
+    background-color: rgba(128, 128, 128, 0.219);
+}

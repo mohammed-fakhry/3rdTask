@@ -59,12 +59,18 @@ setInterval(function () {
     console.log(headImgSrc)
     //text SlideShow
     if (headImgSrc == "Source/header3.jpg") {
+        $("#headerDescr").addClass("bg-light")
+        $("#headerDescr").removeClass("bg-dark text-light")
         $('#welcomeTxt h2').html("Mikiya")
         $('#welcomeTxt p').html("is a Product Designer with a minimalistic portfolio that showcases his work through strong photography and subtle animations. His full site was originally created in Japanese and then translated into English, helping demonstrate the international scalability of his design.")
     } else if (headImgSrc == "Source/header.jpg") {
+        $("#headerDescr").addClass("bg-dark text-light")
+        $("#headerDescr").removeClass("bg-light")
         $('#welcomeTxt h2').html("Revols")
-        $('#welcomeTxt p').html("Revols takes a bold approach on its website by enlarging its small, sophisticated headphones using macro photography and video. The photography and video make the site incredibly product-focused, so its users slowly become more and more immersed in the experience these headphones can give you. The large font treatment on this site is also a nice touch and adds to the larger-than-life earbud photography.")
+        $('#welcomeTxt p').html("Revols takes a bold approach on its website by enlarging its small, sophisticated headphones using macro photography and video. The photography and video make the site incredibly product-focused, so its users slowly become more and more immersed in the experience these headphones can give you.")
     } else if (headImgSrc == "Source/header2.jpg") {
+        $("#headerDescr").addClass("backEffect")
+        $("#headerDescr").removeClass("bg-dark text-light")
         $('#welcomeTxt h2').html("uBear")
         $('#welcomeTxt p').html("uBear designs, develops and produces mobile accessories and related products for urban-minded peoples driven by energy of big cities.")
     }
