@@ -44,14 +44,16 @@ function welcomeLoad() {
 }
 window.onload = function () {
     welcomeLoad();
-    $('#welcomeImg img').animate({ top: '20' }, 2100);
+    $('#welcomeImg img').animate({ top: '20', left: '0' }, 2100);
 };
 // image effects
 $("#welcomeImg").mouseenter(function () {
-    $('#welcomeImg img').animate({ top: '-20' })
+    $('#welcomeImg img').animate({ top: '-20', left: '-20' })
+    $('#headerDescr h2').animate({ fontSize: '2.5em' })
 })
 $("#welcomeImg").mouseleave(function () {
-    $('#welcomeImg img').animate({ top: '20' })
+    $('#welcomeImg img').animate({ top: '20', left: '0' })
+    $('#headerDescr h2').animate({ fontSize: '2em' })
 })
 
 //SlideShow
