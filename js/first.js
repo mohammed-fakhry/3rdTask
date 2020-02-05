@@ -47,7 +47,7 @@ window.onload = function () {
 };
 // image effects
 $("#welcomeImg").mouseenter(function () {
-    $('#welcomeImg img').animate({ top: '-20', left: '-20' })
+    $('#welcomeImg img').animate({ top: '-20', left: '-10' })
     $('#headerDescr h2').animate({ fontSize: '2.5em' })
 })
 $("#welcomeImg").mouseleave(function () {
