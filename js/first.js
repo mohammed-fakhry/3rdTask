@@ -2,16 +2,14 @@
 //--------------------------------------------------Fakhry
 //scroll
 $(window).scroll(function () {
-
     var scrolling = $(this).scrollTop();
     if (scrolling >= 50) {
-        $('nav').removeClass('navbar-light bg-light')
-        $('nav').addClass('navbar-dark bg-dark')
+        $('nav').removeClass('navbar-light bg-light text-dark')
+        $('nav').addClass('navbar-dark bg-dark text-light')
     } else if (scrolling <= 50) {
-        $('nav').addClass('navbar-light bg-light')
-        $('nav').removeClass('navbar-dark bg-dark')
+        $('nav').addClass('navbar-light bg-light text-dark')
+        $('nav').removeClass('navbar-dark bg-dark text-light')
     }
-
 })
 
 // search icon effect
@@ -90,25 +88,34 @@ setInterval(function () {
 
 $('#sidebarToggle').click(function () {
     let sideBarWidth = $('#sidebar').width()
-    if (sideBarWidth == 0) {
-        $('#sidebar').animate({ width: '250px' }, function() {
+    if (sideBarWidth == 0) { //open sideBar
+        $('#sidebar').animate({ width: '300px' }, function () {
             $('#sidebarBtns').show()
         })
-        $('.navbar').animate({marginLeft: '250px'})
+        $('.navbar').animate({ marginLeft: '300px' })
         $('#fadeEffect').fadeIn()
-    } else {
+        $('#sidebarToggle').removeClass("navbar-toggler-icon").addClass("fa fa-chevron-left")
+    } else { //close sideBar
         $('#sidebarBtns').hide()
         $('#sidebar').animate({ width: '0px' })
-        $('.navbar').animate({marginLeft: '0px'})
+        $('.navbar').animate({ marginLeft: '0px' })
         $('#fadeEffect').hide()
+        $('#sidebarToggle').removeClass("fa fa-chevron-left").addClass("navbar-toggler-icon")
     }
     console.log(sideBarWidth)
 })
+$("#fadeEffect").click(function () { //close sideBar
+    $('#sidebarBtns').hide()
+    $('#sidebar').animate({ width: '0px' })
+    $('.navbar').animate({ marginLeft: '0px' })
+    $('#fadeEffect').hide()
+    $('#sidebarToggle').removeClass("fa fa-chevron-left").addClass("navbar-toggler-icon")
+})
 
-$('#sidebar button').hover(function() {
-    $(this).animate({fontSize: '1.2em'},100)
-},function() {
-    $(this).animate({fontSize: '1em'},100)
+$('#sidebar button').hover(function () {
+    $(this).animate({ fontSize: '1.2em' }, 100)
+}, function () {
+    $(this).animate({ fontSize: '1em' }, 100)
 })
 
 //--------------------------------------------------FakhryEnd
