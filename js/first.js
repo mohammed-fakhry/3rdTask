@@ -85,6 +85,27 @@ setInterval(function () {
         .end()
         .appendTo('#welcomeImg');
 }, 5000);
+
+//sideBar
+
+$('#sidebarToggle').click(function () {
+    let sideBarWidth = $('#sidebar').width()
+    if (sideBarWidth == 0) {
+        $('#sidebar').animate({ width: '250px' }, function() {
+            $('#sidebar ul').show()
+        })
+        $('.navbar').animate({marginLeft: '250px'})
+        $('#fadeEffect').fadeIn()
+    } else {
+        $('#sidebar ul').hide()
+        $('#sidebar').animate({ width: '0px' })
+        $('.navbar').animate({marginLeft: '0px'})
+        $('#fadeEffect').hide()
+    }
+
+    console.log(sideBarWidth)
+})
+
 //--------------------------------------------------FakhryEnd
 
 //--------------------------------------------------Mostafa
