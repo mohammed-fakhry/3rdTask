@@ -92,18 +92,23 @@ $('#sidebarToggle').click(function () {
     let sideBarWidth = $('#sidebar').width()
     if (sideBarWidth == 0) {
         $('#sidebar').animate({ width: '250px' }, function() {
-            $('#sidebar ul').show()
+            $('#sidebarBtns').show()
         })
         $('.navbar').animate({marginLeft: '250px'})
         $('#fadeEffect').fadeIn()
     } else {
-        $('#sidebar ul').hide()
+        $('#sidebarBtns').hide()
         $('#sidebar').animate({ width: '0px' })
         $('.navbar').animate({marginLeft: '0px'})
         $('#fadeEffect').hide()
     }
-
     console.log(sideBarWidth)
+})
+
+$('#sidebar button').hover(function() {
+    $(this).animate({fontSize: '1.2em'},100)
+},function() {
+    $(this).animate({fontSize: '1em'},100)
 })
 
 //--------------------------------------------------FakhryEnd
