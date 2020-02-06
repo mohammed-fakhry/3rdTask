@@ -61,12 +61,13 @@ nav {
 /*-- yaser---*/
 #sidebar
 {
-    width: 0px;
+    margin-top: 50px;
+    height: 0px;
+    width: 300px;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    height: 100%;
     z-index: 999;
 }
 /*-- yaserEnd---*/

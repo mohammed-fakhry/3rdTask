@@ -87,29 +87,26 @@ setInterval(function () {
 //sideBar
 
 $('#sidebarToggle').click(function () {
-    let sideBarWidth = $('#sidebar').width()
+    let sideBarWidth = $('#sidebar').height()
     if (sideBarWidth == 0) { //open sideBar
-        $('#sidebar').animate({ width: '300px' }, function () {
+        $('#sidebar').addClass("card").animate({ height: '50%' }, function () {
             $('#sidebarBtns').show()
         })
-        $('.navbar').animate({ marginLeft: '300px' })
         $('#fadeEffect').fadeIn()
-        $('#sidebarToggle').removeClass("navbar-toggler-icon").addClass("fa fa-chevron-left")
+        $('#sidebarToggle').removeClass("navbar-toggler-icon").addClass("fa fa-chevron-up")
     } else { //close sideBar
         $('#sidebarBtns').hide()
-        $('#sidebar').animate({ width: '0px' })
-        $('.navbar').animate({ marginLeft: '0px' })
+        $('#sidebar').removeClass("card").animate({ height: '0px' },200)
         $('#fadeEffect').hide()
-        $('#sidebarToggle').removeClass("fa fa-chevron-left").addClass("navbar-toggler-icon")
+        $('#sidebarToggle').removeClass("fa fa-chevron-up").addClass("navbar-toggler-icon").animate({marginLeft: '5px'})
     }
     console.log(sideBarWidth)
 })
 $("#fadeEffect").click(function () { //close sideBar
     $('#sidebarBtns').hide()
-    $('#sidebar').animate({ width: '0px' })
-    $('.navbar').animate({ marginLeft: '0px' })
+    $('#sidebar').removeClass("card").animate({ height: '0px' },200)
     $('#fadeEffect').hide()
-    $('#sidebarToggle').removeClass("fa fa-chevron-left").addClass("navbar-toggler-icon")
+    $('#sidebarToggle').removeClass("fa fa-chevron-up").addClass("navbar-toggler-icon").animate({marginLeft: "5px"})
 })
 
 $('#sidebar button').hover(function () {
