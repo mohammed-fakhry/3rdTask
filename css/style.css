@@ -26,14 +26,18 @@ nav {
 
 #firstSection {
     margin-top: 70px;
-    height: 720px;
     background-color: rgba(245, 245, 245, 0.164);
+}
+
+#welcomeTxt {
+    height: 730px;
 }
 
 #welcomeImg {
     position: relative;
-    height: 350px;
+    height: 500px;
 }
+
 
 #welcomeImg .slides {
     position: absolute;
@@ -79,7 +83,7 @@ nav {
     transition: .5s;
     border-radius: 15px;
 }
-.item img:hover {
+.item:hover img {
     transform: scale(1.1);
     transition: .5s;
 }
@@ -116,4 +120,11 @@ nav {
 /*AnasEnd*/
 
 /*Shireen*/
+footer i {
+    padding-left: 20px;
+    cursor: pointer;
+}
+footer i:hover {
+    color: teal;
+}
 /*ShireenEnd*/

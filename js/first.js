@@ -44,7 +44,7 @@ window.onload = function () {
     resetInterval();
     $('#welcomeImg img').animate({ top: '20', left: '0' }, 2100); // header Image's Welcome Animation
 };
-// image effects "om mouse hover"
+// image effects "on mouse hover"
 $("#welcomeImg").mouseenter(function () {
     $('#welcomeImg img').animate({ top: '-20', left: '-10' })
     $('#headerDescr h2').animate({ fontSize: '2.5em' })
@@ -123,7 +123,12 @@ $('#sidebar button').hover(function () {
 //--------------------------------------------------FakhryEnd
 
 //--------------------------------------------------Mostafa
-
+$("#loadMore").click(function() {
+    $(".loadRow:first").slideDown(900).next().delay(1000).slideDown(900);
+    let sectionPosition = $(".loadRow:first").offset().top;
+    $("html , body").animate({scrollTop:sectionPosition}, 1000);
+    console.log(sectionPosition)
+})
 //--------------------------------------------------MostafaEnd
 
 //--------------------------------------------------Yasser
