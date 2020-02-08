@@ -1,5 +1,6 @@
 body {
     font-family: 'segoe ui light'; /*fakhry*/
+    position: relative;
 }
 
 /*fakhry*/
@@ -17,8 +18,8 @@ nav {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
     background-color: rgba(0,0,0,0.75);
     z-index: 50;
 }
@@ -49,25 +50,57 @@ nav {
     background-color: rgba(128, 128, 128, 0.219);
 }
 
-#firstSection .col-md-12{
-    height: 500px;
-}
-
 /*fakhryEnd*/
 
 /*Mostafa*/
+.item{
+
+    position: relative;
+    
+}
+.title {
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 10%;
+    width: 80%;
+    left: 10%;
+    transition: .5s;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.item img {
+    transition: .5s;
+    border-radius: 15px;
+}
+.item img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.item:hover .title {
+    opacity: 1;
+    transition: .75s;
+    transform: scale(1.1);
+}
+
 /*MostafaEnd*/
 
 /*-- yaser---*/
 #sidebar
 {
-    margin-top: 45px;
+    margin-top: 50px;
     height: 0px;
     width: 300px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    bottom: 0;
     z-index: 999;
 }
 /*-- yaserEnd---*/

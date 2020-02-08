@@ -44,7 +44,7 @@ window.onload = function () {
     resetInterval();
     $('#welcomeImg img').animate({ top: '20', left: '0' }, 2100); // header Image's Welcome Animation
 };
-// image effects
+// image effects "om mouse hover"
 $("#welcomeImg").mouseenter(function () {
     $('#welcomeImg img').animate({ top: '-20', left: '-10' })
     $('#headerDescr h2').animate({ fontSize: '2.5em' })
@@ -95,18 +95,17 @@ function resetInterval() {
 $('#sidebarToggle').click(function () {
     let sideBarHeight = $('#sidebar').height()
     if (sideBarHeight == 0) { //open sideBar
-        $('#sidebar').addClass("card").animate({ height: '50%' }, function () {
+        $('#sidebar').animate({ height: '50%' }, function () {
             $('#sidebarBtns').show()
         })
         $('#fadeEffect').fadeIn()
         $('#sidebarToggle').removeClass("navbar-toggler-icon").addClass("fa fa-chevron-up")
     } else { //close sideBar
         $('#sidebarBtns').hide()
-        $('#sidebar').removeClass("card").animate({ height: '0px' }, 200)
+        $('#sidebar').animate({ height: '0px' }, 200)
         $('#fadeEffect').hide()
         $('#sidebarToggle').removeClass("fa fa-chevron-up").addClass("navbar-toggler-icon")
     }
-    console.log(sideBarHeight)
 })
 $("#fadeEffect").click(function () { //close sideBar
     $('#sidebarBtns').hide()
@@ -124,6 +123,7 @@ $('#sidebar button').hover(function () {
 //--------------------------------------------------FakhryEnd
 
 //--------------------------------------------------Mostafa
+
 //--------------------------------------------------MostafaEnd
 
 //--------------------------------------------------Yasser
