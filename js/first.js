@@ -124,13 +124,19 @@ $('#sidebar button').hover(function () {
 
 //--------------------------------------------------Mostafa
 $("#loadMore").click(function () { //load more
-    $(".loadRow:first").slideDown(900).next().delay(650).slideDown(900);
-    let sectionPosition = $(".loadRow:first").offset().top;
-    $("html , body").animate({ scrollTop: sectionPosition }, 1000);
-    console.log(sectionPosition)
+    let loadContent = $("#loadMore").html() // fakhry
+    if (loadContent == "LOAD MORE") { // fakhry
+        $(".loadRow:first").slideDown(900).next().slideDown(900);
+        let sectionPosition = $(".loadRow:first").offset().top;
+        $("html , body").animate({ scrollTop: sectionPosition }, 1000);
+        console.log(loadContent)
+        $("#loadMore").html("SHOW LESS")
+    } else { // fakhry
+        $(".loadRow:first").slideUp(900).next().slideUp(900);
+        $("#loadMore").html("LOAD MORE")
+    }
+
 })
-
-
 //--------------------------------------------------MostafaEnd
 
 //--------------------------------------------------Yasser
