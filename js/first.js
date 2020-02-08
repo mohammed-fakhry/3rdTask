@@ -91,7 +91,6 @@ function resetInterval() {
 
 
 //sideBar
-
 $('#sidebarToggle').click(function () {
     let sideBarHeight = $('#sidebar').height()
     if (sideBarHeight == 0) { //open sideBar
@@ -106,7 +105,8 @@ $('#sidebarToggle').click(function () {
         $('#fadeEffect').hide()
         $('#sidebarToggle').removeClass("fa fa-chevron-up").addClass("navbar-toggler-icon")
     }
-})
+});
+
 $("#fadeEffect").click(function () { //close sideBar
     $('#sidebarBtns').hide()
     $('#sidebar').removeClass("card").animate({ height: '0px' }, 200)
@@ -123,12 +123,14 @@ $('#sidebar button').hover(function () {
 //--------------------------------------------------FakhryEnd
 
 //--------------------------------------------------Mostafa
-$("#loadMore").click(function() {
-    $(".loadRow:first").slideDown(900).next().delay(1000).slideDown(900);
+$("#loadMore").click(function () { //load more
+    $(".loadRow:first").slideDown(900).next().delay(650).slideDown(900);
     let sectionPosition = $(".loadRow:first").offset().top;
-    $("html , body").animate({scrollTop:sectionPosition}, 1000);
+    $("html , body").animate({ scrollTop: sectionPosition }, 1000);
     console.log(sectionPosition)
 })
+
+
 //--------------------------------------------------MostafaEnd
 
 //--------------------------------------------------Yasser
