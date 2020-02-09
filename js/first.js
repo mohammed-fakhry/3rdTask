@@ -4,13 +4,30 @@
 $(window).scroll(function () {
     var scrolling = $(this).scrollTop();
     if (scrolling >= 50) {
-        $('nav').removeClass('navbar-light bg-light text-dark')
-        $('nav').addClass('navbar-dark bg-dark text-light')
+        $('nav').removeClass('navbar-light bg-light text-dark').addClass('navbar-dark bg-dark text-light');
+        $('#sidebar').removeClass('bg-light text-dark shadow').addClass('bg-dark text-light');
+        $('#sidebar button').removeClass('bg-light text-dark').addClass('bg-dark text-light');
     } else if (scrolling <= 50) {
-        $('nav').addClass('navbar-light bg-light text-dark')
-        $('nav').removeClass('navbar-dark bg-dark text-light')
+        $('nav').addClass('navbar-light bg-light text-dark').removeClass('navbar-dark bg-dark text-light');
+        $('#sidebar').removeClass('bg-dark text-light').addClass('bg-light text-dark shadow');
+        $('#sidebar button').removeClass('bg-dark text-light').addClass('bg-light text-dark');
     }
+    //topArrow effect
+    let secPosition = $("#daySites").offset().top;
+    if (scrolling >= secPosition) {
+        $("#topArr").fadeIn()
+    } else {
+        $("#topArr").fadeOut()
+    }
+    console.log(scrolling)
 })
+//topArrow
+$("#topArr").click(function () { // scrollTop Button
+    let navPosition = $(".navbar").offset().top;
+    $("html , body").animate({ scrollTop: 0 }, 1000);
+    console.log(navPosition)
+})
+
 
 // search icon effect
 $("#navSearch i").click(function () { //Open

@@ -8,6 +8,22 @@ nav {
     position: relative;
 }
 
+#topArr {
+    display: none;
+    cursor: pointer;
+    opacity: .2;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    transition: .5s;
+    font-size: 45px;
+}
+#topArr:hover {
+    opacity: .75;
+    font-size: 55px;
+}
+
+
 #navSearch input{
     display: none;
     width: 300px;
